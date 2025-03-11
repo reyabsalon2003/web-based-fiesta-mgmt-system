@@ -36,9 +36,8 @@ class AnalyticController extends Controller
             'rating' => 'required|numeric|min:0|max:5',
         ]);
 
-        $analytic = Analytic::create($request->all());
 
-        return response()->json($analytic, 201);
+        
     }
 
     /**
@@ -63,7 +62,7 @@ class AnalyticController extends Controller
     public function update(Request $request, string $id)
     {
         
-        $analytic =::findOrFail($id);
+       
 
         $request->validate([
             'event_id' => 'sometimes|exists:events,id',
@@ -72,9 +71,7 @@ class AnalyticController extends Controller
             'rating' => 'sometimes|numeric|min:0|max:5',
         ]);
 
-        $analytic->update($request->all());
 
-        return response()->json($analytic, 200);
     }
     }
 

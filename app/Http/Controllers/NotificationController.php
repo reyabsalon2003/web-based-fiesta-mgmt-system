@@ -33,9 +33,9 @@ class NotificationController extends Controller
             'message' => 'required|string',
         ]);
 
-        $notification = Notification::create($request->all());
+        
 
-        return response()->json($notification, 201);
+        
     }
 
     /**
@@ -59,16 +59,15 @@ class NotificationController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $notification = Notification::findOrFail($id);
+        
 
         $request->validate([
             'user_id' => 'sometimes|exists:users,id',
             'message' => 'sometimes|string',
         ]);
 
-        $notification->update($request->all());
-
-        return response()->json($notification, 200);
+       
+        
     }
 
     /**
