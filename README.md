@@ -4,6 +4,6 @@
 - Fergie Dela Cruz
 - Arnel Sayam
 - Vanessa Ocay
-- Matt Angelo Capulong
+- Mark Angelo Capulong
 - Rey Absalon
 
